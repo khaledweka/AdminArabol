@@ -1,0 +1,51 @@
+@import "compass", "bourbon", "setting", "variables2";
+
+// Table Reference
+.table {
+	background: #f0f0f0;
+	box-shadow: 0 20px 20px -20px rgba(0,0,0,.3);
+	border: 1px #e0e0e0 solid;
+	@include border-radius(5px);
+	tbody tr {
+		@include transition(all 0.3s ease 0s);
+	}
+	tbody tr:hover {
+		background: #fff;
+	}
+	tbody tr td {
+		border-bottom: 1px #c9c9c9 solid;
+		box-shadow: inset 0 -20px 20px -20px rgba(0,0,0,0.1);
+		padding: 10px 10px;
+		text-align: right !important;
+	}
+	thead {
+		@include border-radius(5px !important);
+		overflow: hidden;
+	}
+	thead > tr > th {
+		background: lighten($brand-dark, 5%);
+		color: $brand-gray;
+	}
+	a.btn {
+		i {
+			position: relative;
+			margin-left: 5px;
+		}
+	}
+}
+
+// Reference Table-bordered
+.table-bordered thead tr th {
+	border: 0px #c9c9c9 solid !important;
+}
+.table-bordered tbody tr td {
+	border-bottom: 1px #c9c9c9 solid !important;
+	border: 1px #c9c9c9 solid !important;
+}
+.table-bordered tbody tr td:first-child, .table-bordered tbody tr td:last-child {
+	border-left: 0px $brand-dark solid !important;
+	border-right: 0px $brand-dark solid !important;
+	//border: 1px $brand-dark solid !important;
+}
+
+

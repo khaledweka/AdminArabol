@@ -1,0 +1,120 @@
+@import "compass", "bourbon", "setting", "variables2";
+
+// Class imgContent //
+/* Class imgContent */
+.imgContent {
+	position: relative;
+	background: $brand-dark;
+	@include transition(all 0.3s ease);
+	border: 3px $brand-dark solid;
+	cursor: pointer;
+	overflow: hidden;
+	@include border-radius(2px);
+	max-height: 200px;
+	min-height: 200px;
+	margin: 10px 0;
+
+	img {
+		position: absolute;
+		display: block;
+		width: 101% !important;
+		height: 102% !important;
+		left: 50%;
+	  @include transform(translate(-50%,0));
+	  @include transition(all 0.3s ease);
+	  z-index: 99;
+	}
+
+	span.title {
+		position: absolute;
+		display: block;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: 9999;
+		background: $brand-dark;
+		color: $brand-gray;
+		padding: 10px;
+		text-align: left;
+	}
+
+	a {
+		position: absolute;
+		bottom: -200%;
+		z-index: 999;
+		padding: 5px;
+		margin: 0 auto;
+		width: 80px;
+		left: 50%;
+		margin-left: -40px;
+		@include transition(all 0.4s ease 0.3s);
+	}
+	a.delete {
+	  @include transition(all 0.4s ease 0.2s);
+	 }
+
+	&:hover {
+		img {
+			@include transform(translate(-50%,0) scale(1.05));
+			@include opacity(0.8);
+	  }// img
+	  a {
+	  	bottom: 60%;
+	  	@include transition(all 0.4s ease 0.1s);
+	  }
+	  a.delete {
+	  	bottom: 40%;
+	  	@include transition(all 0.4s ease 0.2s);
+	  }
+	}
+}
+
+// Class vidContent //
+/* Class vidContent */
+.vidContent {
+	position: relative;
+	direction: rtl !important;
+	@include transition(all 0.3s ease);
+	background: $brand-dark;
+	//border: 3px $brand-dark solid;
+	cursor: pointer;
+	@include border-radius(2px);
+	max-height: 200px;
+	min-height: 200px;
+	margin: 20px 0;
+
+	.embed-responsive {
+		position: relative;
+		margin: 0;
+		//padding-bottom: 0;
+		border:0 !important;
+		z-index: 99;
+		left: 0px;
+	}
+
+	span.title {
+		position: relative;
+		display: block;
+		width: 100%;
+		background: $brand-dark;
+		color: $brand-gray;
+		text-align: center;
+		padding: 10px;
+		z-index: 999;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	a {
+		direction: rtl !important;
+		position: relative;
+		text-align: center;
+		padding: 10px;
+	}
+
+	&:hover {
+		@include transform(scale(1.1));
+	}
+
+}
