@@ -50,16 +50,18 @@ License: GPL.
 	<header class="topHead">
 		<div class="prl10">
 			<div class="row">
-				<div class="col-sm-6 col-xs-12">
+				<div class="col-sm-4 col-xs-12">
 
 					<h1 class="logo">Admin Arabol</h1><!-- The Main Name -->
 
 				</div> <!-- col-xs-6 -->
-				<div class="col-sm-6 col-xs-12 topNav">
+				<div class="col-sm-8 col-xs-12 topNav">
 
 					<!-- Logout Button -->
-					<a href="#" class="topA text-red" data-toggle="tooltip" data-placement="right" title="تسجيل الخروج"><span class="fa fa-power-off fa-fw"></span></a>
-
+					<div class="btn-group user-infos">
+						<a href="#" class="topA text-red" data-toggle="tooltip" data-placement="right" title="تسجيل الخروج"><span class="fa fa-power-off fa-fw"></span></a>
+					</div>
+					
 					<!-- User DropMenu -->
 					<div class="btn-group user-infos">
 						<a href="#" class="btn btn-sm btn-primary text-xs hidden-xs"><i class="fa fa-user fa-fw"></i> اهلا, مستر أكس </a>
@@ -217,7 +219,9 @@ License: GPL.
 						</div> <!-- btn-group -->
 					
 					<!-- Responsive Menu Button -->
-					<a class="topA res-menu fa-fw hidden-sm hidden-md hidden-lg"><span class="fa fa-bars"></span></a>
+					<div class="btn-group user-infos">
+						<a href="#" class="topA res-menu btn-primary hidden-md hidden-lg text-center"><span class="fa fa-bars fa-fw"></span></a>
+					</div>
 
 				</div> <!-- col-xs-6 -->
 			</div> <!-- Row -->
@@ -229,7 +233,7 @@ License: GPL.
 	    <div class="row">
 
 				<!-- main -->
-				<div class="column col-sm-10" id="main">
+				<div class="column col-md-10 col-sm-12" id="main">
 					<div class="padding">
 						<div class="full col-md-9">
 						<!-- content -->
